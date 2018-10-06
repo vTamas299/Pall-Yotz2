@@ -373,9 +373,10 @@ section#intro .intro_content .paljoc {
   float: left;
   padding: 0;
   margin: 20px;
+  clip-path: circle();
   -webkit-clip-path: circle();
-          clip-path: circle();
   shape-outside: circle();
+  -webkit-shape-outside: circle();
 }
 
 section#intro .intro_content .paljoc img {
@@ -681,6 +682,8 @@ section#intro .intro_content p {
   width: 100%;
   height: 400px;
   background: url(https://images.pexels.com/photos/582428/pexels-photo-582428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -869,4 +872,4 @@ section#intro .intro_content p {
   color: #f5a5a5;
   cursor: pointer;
 }
-/*# sourceMappingURL=style2.css.map */
+/*# sourceMappingURL=style.css.map */

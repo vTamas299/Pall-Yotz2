@@ -71,11 +71,13 @@ header {
     padding: 0 100px;
     background:rgba(44, 17, 8, 0.001);
     width: 100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     z-index: 1000;
   }
   .navbar-inverse {
     background:rgba(10, 10, 10, 0.801);
+    -webkit-transition: ease-in-out 1s;
     transition: ease-in-out 1s;
   }
   
@@ -100,6 +102,8 @@ header {
   header nav ul {
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   
@@ -116,17 +120,20 @@ header {
     display: block;
     font-family: "Noticia Text", serif;
     letter-spacing: 2px;
+    -webkit-transition: .5s;
     transition: .5s;
   }
   header nav ul li a:hover {
     color: #d40c0c;
     background: #f8d9b0;
     text-decoration: none;
+    -webkit-transition: ease-in-out;
     transition: ease-in-out;
   }
   header nav ul li a.active2 {
     color: #f3dcdc;
     background: #f74437;
+    -webkit-transition: .5s;
     transition: .5s;
   }
   header nav ul li a.active2:hover {
@@ -156,6 +163,7 @@ header {
       background: #333;
       top: 50px;
       left: -100%;
+      -webkit-transition: 0.5s;
       transition: 0.5s;
     }
     header nav.active {
@@ -204,17 +212,20 @@ section#home {
     position: relative;
     margin: 0;
     padding: 0;
-    box-shadow: 0 20px 30px #0c0b0977;
+    -webkit-box-shadow: 0 20px 30px #0c0b0977;
+            box-shadow: 0 20px 30px #0c0b0977;
 
     .heading {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
         text-align: center;
         max-width: 75vw;
         max-height: 70vh;
-        box-shadow: 15px 25px 50px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 15px 25px 50px rgba(0, 0, 0, 0.5);
+                box-shadow: 15px 25px 50px rgba(0, 0, 0, 0.5);
         border-radius: 30px;
         border: 2px solid white;
         //background: linear-gradient(45deg, rgba(80, 66, 55, 0.7), rgba(20, 10, 2, 0.7));
@@ -228,7 +239,8 @@ section#home {
             max-width: 100%;
             max-height: 100%;
             text-shadow: 5px 5px 10px rgb(19, 18, 18);
-            transform: translateX(0%);
+            -webkit-transform: translateX(0%);
+                    transform: translateX(0%);
             margin-bottom: 0;
           }
           p {
@@ -237,7 +249,8 @@ section#home {
             font-size: 1.2rem; 
             max-width: 100%;
             max-height: 100%;
-            transform: translateX(0%);
+            -webkit-transform: translateX(0%);
+                    transform: translateX(0%);
             text-align: justify;
             padding: 20px;
             font-style: italic;
@@ -246,6 +259,7 @@ section#home {
           hr {
             border: 0;
             height: 2px;
+            background-image: -webkit-gradient(linear, left top, right top, from(rgba(252, 250, 250, 0)), color-stop(rgba(248, 245, 245, 0.75)), to(rgba(0, 0, 0, 0)));
             background-image: linear-gradient(to right, rgba(252, 250, 250, 0), rgba(248, 245, 245, 0.75), rgba(0, 0, 0, 0));
         }
     }
@@ -256,15 +270,20 @@ ul.social {
     position: absolute;
     bottom: -150px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background: rgba(248, 246, 245, 0.5);
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     border:2px solid white;
     border-radius: 50px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
     padding: 10px 10px;
     overflow: hidden;
 
@@ -280,10 +299,14 @@ ul.social {
             margin: 0 10px;
             border-radius: 50%;
             padding: 8px;
-            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
             text-decoration: none;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+                    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+            background: -webkit-gradient(linear, left bottom, left top, from(#ddd), to(#fff));
             background: linear-gradient(0deg, #ddd, #fff);
+            -webkit-transition: .5s;
             transition: .5s;
             color: transparent;
         }
@@ -291,17 +314,20 @@ ul.social {
 }
 
 ul.social li a:hover {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 ul.social li a .fab {
     width: 100%;
     height: 100%;
     display: block;
+    background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(#ddd));
     background: linear-gradient(0deg, #fff, #ddd);
     border-radius: 50%;
     line-height: calc(60px - 12px);
     font-size: 26px;
     color: #262626;
+    -webkit-transition: .5s;
     transition: .5s;
 }
 
@@ -427,10 +453,17 @@ section#intro {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.7);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.7);
     border: 10px solid white;
 
     h1 {
@@ -439,10 +472,12 @@ section#intro {
         font-size: 5em;
         font-family: "Pacifico";
         text-shadow: 0 10px 15px rgba(0,0,0,.5);
-        transform: skewY(-4deg);
+        -webkit-transform: skewY(-4deg);
+                transform: skewY(-4deg);
         letter-spacing: 10px;
         background: rgb(61, 147, 218);
-        box-shadow: 3px 10px 20px rgba(10, 10, 10, 0.842);
+        -webkit-box-shadow: 3px 10px 20px rgba(10, 10, 10, 0.842);
+                box-shadow: 3px 10px 20px rgba(10, 10, 10, 0.842);
         margin: 0;
         width: 500px;
         height: 150px;
@@ -470,7 +505,8 @@ section#intro {
     grid-gap: 20px;
     justify-items: center;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     overflow: hidden;
   
     .card {
@@ -479,7 +515,9 @@ section#intro {
         overflow: hidden;
         border: 5px solid white;
         border-radius: 10px;
-        box-shadow: 3px 10px 20px rgba(10, 10, 10, 0.842);
+        -webkit-box-shadow: 3px 10px 20px rgba(10, 10, 10, 0.842);
+                box-shadow: 3px 10px 20px rgba(10, 10, 10, 0.842);
+        -webkit-transition: .7s;
         transition: .7s;
         min-width: 420px;
         min-height: 328px;
@@ -495,7 +533,8 @@ section#intro {
                 background: linear-gradient(132deg,  rgb(125, 184, 48), rgb(83, 55, 13));
                 background-size: 400% 400%;
                 border-radius: 5px;
-                animation: gradient 10s ease infinite;
+                -webkit-animation: gradient 10s ease infinite;
+                        animation: gradient 10s ease infinite;
         
                 border: 2px solid white;
                 padding: 5px 0;
@@ -516,6 +555,12 @@ section#intro {
               padding: 4px;
             }
         }
+  
+    @-webkit-keyframes gradient {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
   
     @keyframes gradient {
       0% {background-position: 0% 50%;}
@@ -538,10 +583,12 @@ section#intro {
             left: 0;
             width: 100%;
             height: 100%;
+            -webkit-transition: .5s;
             transition: .5s;
             img {
                 height: 100%;
                 width: 100%;
+                -webkit-transition: ease-in-out .5s;
                 transition: ease-in-out .5s;
             }
             
@@ -555,7 +602,8 @@ section#intro {
   }
   
   .container .card:hover .img-box img {
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   }
   
   
@@ -565,8 +613,10 @@ section#intro {
     height: 100%;
     bottom: -70%;
     padding: 20px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     text-align: center;
+    -webkit-transition: .7s;
     transition: .7s;
   }
   
@@ -575,38 +625,47 @@ section#intro {
   }
   
   .container .card:nth-child(1) .content {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgb(211, 122, 114)), to(transparent));
     background: linear-gradient(0deg, rgb(211, 122, 114), transparent);
   }
   
   .container .card:nth-child(2) .content {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgb(120, 201, 181)), to(transparent));
     background: linear-gradient(0deg, rgb(120, 201, 181), transparent);
   }
   
   .container .card:nth-child(3) .content {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgb(20, 223, 230)), to(transparent));
     background: linear-gradient(0deg, rgb(20, 223, 230), transparent);
   }
   
   .container .card:nth-child(4) .content {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgb(119, 163, 15)), to(transparent));
     background: linear-gradient(0deg, rgb(119, 163, 15), transparent);
   }
   
   .container .card:nth-child(5) .content {
+    background: -webkit-gradient(linear, left bottom, left top, from(red), to(transparent));
     background: linear-gradient(0deg, red, transparent);
   }
   
   .container .card:nth-child(6) .content {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgb(175, 8, 175)), to(transparent));
     background: linear-gradient(0deg, rgb(175, 8, 175), transparent);
   }
   
   .container .card:nth-child(7) .content {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgb(20, 223, 230)), to(transparent));
     background: linear-gradient(0deg, rgb(20, 223, 230), transparent);
   }
   
   .container .card:nth-child(8) .content {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgb(119, 163, 15)), to(transparent));
     background: linear-gradient(0deg, rgb(119, 163, 15), transparent);
   }
   .container .card:hover {
-    box-shadow: 6px 20px 40px rgba(10, 10, 10, 0.842);
+    -webkit-box-shadow: 6px 20px 40px rgba(10, 10, 10, 0.842);
+            box-shadow: 6px 20px 40px rgba(10, 10, 10, 0.842);
   }
 //so
 
@@ -618,10 +677,17 @@ section#intro {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.7);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.7);
     border: 10px solid white;
 
     h1 {
@@ -630,10 +696,12 @@ section#intro {
         font-size: 4em;
         font-family: "Pacifico";
         text-shadow: 0 10px 15px rgba(0,0,0,.5);
-        transform: skewY(-4deg);
+        -webkit-transform: skewY(-4deg);
+                transform: skewY(-4deg);
         letter-spacing: 7px;
         background: rgb(205, 61, 218);
-        box-shadow: 3px 10px 20px rgba(10, 10, 10, 0.842);
+        -webkit-box-shadow: 3px 10px 20px rgba(10, 10, 10, 0.842);
+                box-shadow: 3px 10px 20px rgba(10, 10, 10, 0.842);
         margin: 0;
         width: 600px;
         height: 150px;
@@ -652,10 +720,17 @@ section#intro {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.7);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.7);
     border: 10px solid white;
 
     h1 {
@@ -725,15 +800,23 @@ section#intro {
     grid-auto-rows: minmax(300px, auto);
     grid-gap: 20px;
     padding: 50px;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
             //social icons
         ul.social2 {
             width: 100%;
             margin: 0;
             padding: 0;
-            justify-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             // background: rgba(248, 246, 245, 0.5);
             // box-sizing: border-box;
@@ -755,10 +838,14 @@ section#intro {
                     margin: 0 10px;
                     border-radius: 50%;
                     padding: 8px;
-                    box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+                            box-sizing: border-box;
                     text-decoration: none;
-                    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+                    -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+                            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+                    background: -webkit-gradient(linear, left bottom, left top, from(#ddd), to(#fff));
                     background: linear-gradient(0deg, #ddd, #fff);
+                    -webkit-transition: .5s;
                     transition: .5s;
                     color: transparent;
                 }
@@ -766,17 +853,20 @@ section#intro {
         }
 
         ul.social2 li a:hover {
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+            -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+                    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
         }
         ul.social2 li a .fab {
             width: 100%;
             height: 100%;
             display: block;
+            background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(#ddd));
             background: linear-gradient(0deg, #fff, #ddd);
             border-radius: 50%;
             line-height: calc(60px - 12px);
             font-size: 26px;
             color: #262626;
+            -webkit-transition: .5s;
             transition: .5s;
         }
 
